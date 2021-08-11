@@ -1,0 +1,126 @@
+<div class="row">
+    <div class=" welkom my-2 tekst">
+        <h1 style="font-size: 50px" class="mt-5 my-element animate__animated animate__bounce">Welkom <span id="username"></span>!</h1>
+    </div>
+</div>
+
+
+<img id="complete" class="complete" src="assets/img/complete.gif">
+
+<br><br>
+
+
+<img id="icon" src="assets/img/diagramlijst1.png" class="diagramLijstIcon" onmouseover="changeImage()">
+
+<div class="centered">
+    <img id="wolk" src="assets/img/wolk.png" alt="Snow" class="wolk">
+    <div id="typedtext" class="typewritertext"></div>
+</div>
+
+<!-- ---- -->
+
+
+<article class="welcomediv background" onclick="goToVerbindingen()">
+
+    <div>
+        <img src="assets/img/diagram.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Diagrammen</h3>
+    </div>
+
+</article>
+
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<article class="welcomediv background" onclick="goToGeluid()">
+
+    <div name="fname">
+        <img src="assets/img/shop.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Shop</h3>
+    </div>
+
+</article>
+
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<article class="welcomediv background" onclick="goToKompas()">
+    <div>
+        <img src="assets/img/logout.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Uitloggen</h3>
+    </div>
+</article>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<script>
+
+    var username = sessionManager.get("username");
+
+    // set up text to print, each item in array is new line
+    var aText = ["Hallo " + username + "!",
+        "Leuk dat je er bent!",
+        "Klik op een vak",
+        "om te navigeren!"];
+    var iSpeed = 30; // time delay of print out
+    var iIndex = 0; // start printing array at this position
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+
+    function typewriter() {
+
+        sContents = ' ';
+        iRow = Math.max(0, iIndex - iScrollAt);
+        var destination = document.getElementById("typedtext");
+
+        while (iRow < iIndex) {
+            sContents += aText[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+        if (iTextPos++ == iArrLength) {
+            iTextPos = 0;
+            iIndex++;
+            if (iIndex != aText.length) {
+                iArrLength = aText[iIndex].length;
+                setTimeout("typewriter()", 50);
+            }
+        } else {
+            setTimeout("typewriter()", iSpeed);
+        }
+    }
+
+    typewriter();
+
+    var image = document.getElementById("icon");
+
+    function changeImage() {
+        if (image.getAttribute('src') === "assets/img/diagramLijst1.png") {
+            //change the source of the image
+            image.src = "assets/img/diagramLijst2.png";
+        } else {
+            image.src = "assets/img/diagramLijst1.png";
+        }
+    }
+
+    async function goToVerbindingen() {
+        app.loadController(CONTROLLER_DIAGRAM_LIST);
+    }
+
+
+    async function goToGeluid() {
+        app.loadController(CONTROLLER_SHOP);
+    }
+
+    async function goToKompas() {
+        app.loadController(CONTROLLER_LOGOUT);
+    }
+
+
+</script>

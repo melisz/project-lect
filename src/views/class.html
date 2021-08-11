@@ -1,0 +1,144 @@
+<style>
+    #sidebar {
+        background: white;
+        min-height: 90vh;
+        margin-bottom: -50px;
+        margin-top: 0;
+
+
+    }
+
+    .pagination-info {
+        display: none;
+    }
+
+    a {
+
+        color: #CD4E00;
+    }
+
+    a:hover {
+        color: #ee8136;
+    }
+
+    .activeLink {
+        font-weight: bold;
+    }
+
+    .swal2-select {
+        border-radius: 0.25rem;
+        outline: none;
+    }
+
+    .swal2-select:focus {
+        border: 1px solid dodgerblue;
+    }
+
+    .bootstrap-select {
+        width: 25rem !important;
+    }
+
+    .table {
+        background-color: white;
+    }
+</style>
+<div class="row h-100">
+    <!-- Sidebar -->
+    <div class="col-2" id="sidebar">
+        <div class="mt-3">
+            <h3>
+                <span id="className"></span>
+                <a href="" id="editName" class="text-muted"><small><i class="fas fa-edit"></i></small></a>
+            </h3>
+            <p id="numberOfStudents"></p>
+        </div>
+        <hr>
+        <ul class="list-unstyled">
+            <li>
+                <a href="" class="activeLink" data-tab="login-data">Alle inloggegevens</a>
+            </li>
+            <li>
+                <a href="" data-tab="overall-progress">Algemene voortgang</a>
+            </li>
+            <li>
+                <a href=""  data-tab="progress-of-diagram">Voortgang per diagram</a>
+            </li>
+            <li style="margin-top: 10rem">
+                <hr>
+                <a href="" id="deleteClass" class="text-danger">Klas verwijderen</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="col-10 mt-3">
+
+        <!-- Login data tab -->
+        <div class="tab" id="login-data" >
+            <div id="toolbar">
+                <button class="btn btn-secondary" id="addStudent"><i class="fas fa-user-plus"></i> Nieuwe leerling
+                </button>
+                <p class="d-inline ml-4 text-muted font-italic " id="numberOfFreeSpots"></p>
+            </div>
+            <table class="table" id="studentInfo" data-toolbar="#toolbar"></table>
+        </div>
+
+
+        <!-- Overall Progress tab -->
+        <div class="tab" id="overall-progress" style="display:none;">
+            <table class="table" id="overallProgressTable"></table>
+        </div>
+
+
+        <!-- Progress of diagram tab -->
+        <div class="tab text-center" id="progress-of-diagram" style="display:none;">
+            <div class="form-group">
+                <h5 class="mt-2"><label for="selectDiagram">Kies een diagram om de voortgang van te
+                    weergeven:</label></h5>
+                <select id="selectDiagram" class="selectDiagram">
+                    <optgroup id="mine" label="Mijn diagrammen">
+                    </optgroup>
+                    <optgroup id="other" label="Overige diagrammen">
+                    </optgroup>
+                </select>
+            </div>
+            <div class="row" id="lijstAfgerond" style="display: none">
+                <div class="col m-0">
+                    <h5>Afgerond:</h5>
+                    <ul class="list-group" id="afgerond">
+                    </ul>
+                </div>
+                <div class="col m-0">
+                    <h5>Nog niet afgerond:</h5>
+                    <ul class="list-group" id="nogNietAfgerond">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="afgerondeDiagrammen" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="afgerondeDiagrammenTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-active" id="afgerondeDiagrammenTable"></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

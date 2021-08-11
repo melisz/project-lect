@@ -1,0 +1,40 @@
+<style>
+    .classCard {
+        min-width: 15rem;
+        max-width: 15rem;
+        cursor: pointer;
+    }
+
+    .classCard:hover {
+        box-shadow: 0.25rem 0.25rem 0.25rem gray;
+    }
+
+    button {
+        box-shadow: none !important;
+        margin: 0 0.5rem;
+
+    }
+
+</style>
+<div class="loading">
+    <div class="loader"></div>
+</div>
+<main>
+    <header class="text-center my-5">
+        <h1 class="">Uw klassen:</h1>
+        <small class="text-muted" id="textAvailableClasses"></small>
+    </header>
+
+    <div class="row justify-content-center">
+        <div class="col-7">
+            <div class="card-deck text-center">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5 ">
+        <button class="btn btn-primary" id="addClass"><i class="fas fa-plus"></i> Toevoegen</button>
+        <button class="btn btn-danger" id="deleteClass"><i class="far fa-trash-alt"></i> Verwijderen</button>
+    </div>
+</main>

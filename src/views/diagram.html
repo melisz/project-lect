@@ -1,0 +1,141 @@
+<body>
+<head>
+
+    <!-- Row for the description -->
+    <div class="row justify-content-center p-3 my-0">
+        <div class="col-4 bg-light text-center" style="border-radius: 15px">
+
+            <p class="my-auto p-3" id="opdrachtomschrijving">Sleep de woorden in de juiste velden. Klik op een diagram voor tips/vragen.</p>
+
+        </div>
+    </div>
+
+    <!-- Progressbar -->
+    <div class="container-progress">
+        <div id="progressbar"></div>
+        <div id="progresstext"></div>
+    </div>
+
+    <!-- Row for the tree diagram -->
+    <div class="row mx-4 wordsContainer ">
+
+        <!-- Column for the diagram -->
+        <div class="col-9 bg-light mr-2 diagramsize" id="diagram"></div>
+
+        <!-- Column for the list of words -->
+        <div class="listofwordssize" id="listOfWords"></div>
+
+    </div>
+
+    <!-- Row for the button to check the answer -->
+    <div class="row justify-content-center">
+        <button  class="btn btn-primary my-3" id="getResult">Controleer</button>
+    </div>
+
+    <div class="col displayfigure">
+
+        <img id="icon" src="../src/assets/img/diagramlijst1.png" style="display: none" class="diagramLijstIcon2">
+
+        <div class="centered2">
+            <img id="wolk" src="../src/assets/img/wolk.png" alt="Snow" style="display: none" class="wolk2">
+
+            <span id="typedtext" style="display: none" class="typewritertext4"></span>
+            <p id="goed" style="display: none" class="typewritertext3"></p>
+            <p id="fout" style="display: none" class="typewritertext5"></p>
+        </div>
+    </div>
+
+
+    <style>
+        .swal2-top-end {
+            margin-top: 1.5rem;
+        }
+
+        .bubble {
+            position: relative;
+            background: #FFFFCC;
+            border: 1px solid #FFCC00;
+            max-width: 16rem;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        .bubble:after,
+        .bubble:before {
+            right: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .bubble:after {
+            border-color: rgba(255, 255, 204, 0);
+            border-right-color: #FFFFCC;
+            border-width: 15px;
+            margin-top: -15px;
+        }
+
+        .bubble:before {
+            border-color: rgba(255, 204, 0, 0);
+            border-right-color: #FFCC00;
+            border-width: 16px;
+            margin-top: -16px;
+        }
+    </style>
+
+    <script>
+
+        if (sessionManager.get("type") === "leerling") {
+            document.getElementById('wolk').style.display = "block";
+            document.getElementById('typedtext').style.display = "block";
+            document.getElementById('icon').style.display = "block";
+        }
+
+        var aText = ["Diagram gestart!",
+            "Voor informatie ",
+            "klik op de vakken.",
+            "Succes!!"];
+        var iSpeed = 25; // time delay of print out
+        var iIndex = 0; // start printing array at this position
+        var iArrLength = aText[0].length; // the length of the text array
+        var iScrollAt = 20; // start scrolling up at this many lines
+        var iTextPos = 0; // initialise text position
+        var sContents = ''; // initialise contents variable
+        var iRow; // initialise current row
+
+
+        function typewriter()
+        {
+            sContents =  ' ';
+            iRow = Math.max(0, iIndex-iScrollAt);
+            var destination = document.getElementById("typedtext");
+
+            while ( iRow < iIndex ) {
+                sContents += aText[iRow++] + '<br />';
+            }
+            destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+            if ( iTextPos++ == iArrLength ) {
+                iTextPos = 0;
+                iIndex++;
+                if ( iIndex != aText.length ) {
+                    iArrLength = aText[iIndex].length;
+                    setTimeout("typewriter()", 100);
+                }
+            } else {
+                setTimeout("typewriter()", iSpeed);
+            }
+        }
+
+        typewriter();
+
+    </script>
+
+</head>
+</body>
+
+
+

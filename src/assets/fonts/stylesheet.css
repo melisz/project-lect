@@ -1,0 +1,10 @@
+
+
+@font-face {
+    font-family: 'garavitoregular';
+    src: url('Garavito.woff2') format('woff2'),
+         url('Garavito.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

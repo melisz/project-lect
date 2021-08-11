@@ -1,0 +1,94 @@
+<style>
+    button, input {
+        box-shadow: none !important;
+    }
+</style>
+
+<div class="loading">
+    <div class="loader"></div>
+</div>
+
+<div class="row main" id="divtable">
+    <div class="col-5 mt-5" style="margin-left: 10rem !important;">
+        <section id="search">
+            <form class="input-group">
+                <input type="search" placeholder="Welk diagram zoek je?" class="form-control" id="searchBar">
+                <div class="input-group-append">
+                    <button id="searchButton" type="submit" class="btn btn-danger">Zoek</button>
+                </div>
+            </form>
+        </section>
+
+        <div id="resetSearch" class="text-right" style="display: none">
+            <button class="btn btn-primary mt-1">Verwijder zoekopdracht</button>
+        </div>
+
+
+        <table class="table table-hover paginated">
+
+            <thead>
+            <tr class="table-borderless h5">
+                <th scope="col">Diagram</th>
+                <th scope="col" class="text-right">Voltooid</th>
+            </tr>
+            </thead>
+
+            <tbody class="table-body mb-5 font-weight-bold text-success"></tbody>
+
+        </table>
+    </div>
+</div>
+    <div class="col">
+
+        <img id="icon" src="assets/img/diagramlijst1.png" style="display: none;" class="diagramLijstIcon" onmouseover="changeImage()">
+
+        <div class="centered">
+            <img id="wolk" src="assets/img/wolk.png" alt="Snow" class="wolk" style="display: none;">
+            <div id="typedtext" class="typewritertext" style="display: none;"></div>
+        </div>
+
+    </div>
+</div>
+<script>
+
+    if (sessionManager.get("type") === "leerling") {
+        document.getElementById('wolk').style.display = "block";
+        document.getElementById('typedtext').style.display = "block";
+        document.getElementById('icon').style.display = "block";
+    }
+
+    // set up text to print, each item in array is new line
+    var aText = ["Welke diagram wil", "je maken?", "Klik er één om", "te starten."];
+    var iSpeed = 30; // time delay of print out
+    var iIndex = 0; // start printing array at this position
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+
+    function typewriter() {
+
+        sContents = ' ';
+        iRow = Math.max(0, iIndex - iScrollAt);
+        var destination = document.getElementById("typedtext");
+
+        while (iRow < iIndex) {
+            sContents += aText[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+        if (iTextPos++ == iArrLength) {
+            iTextPos = 0;
+            iIndex++;
+            if (iIndex != aText.length) {
+                iArrLength = aText[iIndex].length;
+                setTimeout("typewriter()", 50);
+            }
+        } else {
+            setTimeout("typewriter()", iSpeed);
+        }
+    }
+
+    typewriter();
+</script>

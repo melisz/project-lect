@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Verbindingen",
+    "root_orientation": "NORTH",
+    "node_structure": "{\"text\": {\"data-veld\": \"1\", \"data-parentveld\": \"0\"}, \"children\": [{\"text\": {\"data-veld\": \"2\", \"data-parentveld\": \"1\"}, \"children\": [{\"text\": {\"data-veld\": \"4\", \"data-parentveld\": \"2\"}}, {\"text\": {\"data-veld\": \"5\", \"data-parentveld\": \"2\"}}]}, {\"text\": {\"data-veld\": \"3\", \"data-parentveld\": \"1\"}, \"children\": [{\"text\": {\"data-veld\": \"6\", \"data-parentveld\": \"3\"}}, {\"text\": {\"data-veld\": \"7\", \"data-parentveld\": \"3\"}}]}]}",
+    "answers": "[{\"text\": \"Verbindingen\", \"parent\": \"\"}, {\"text\": \"Met schroefdraad\", \"parent\": \"Verbindingen\"}, {\"text\": \"Zonder schroefdraad\", \"parent\": \"Verbindingen\"}, {\"text\": \"Schroef\", \"parent\": \"Met schroefdraad\"}, {\"text\": \"Bout\", \"parent\": \"Met schroefdraad\"}, {\"text\": \"Spijker\", \"parent\": \"Zonder schroefdraad\"}, {\"text\": \"Nietje\", \"parent\": \"Zonder schroefdraad\"}]",
+    "descriptions": "[{\"text\": \"Alle andere woorden vallen onder deze categorie.\", \"veld\": 1}, {\"text\": \"In welke categorieën kan je verbindingen verdelen?\", \"veld\": 2}, {\"text\": \"In welke categorieën kan je verbindingen verdelen?\", \"veld\": 3}, {\"text\": \"Welke voorwerpen zijn verbindingen?\", \"veld\": 4}, {\"text\": \"Welke voorwerpen zijn verbindingen?\", \"veld\": 5}, {\"text\": \"Welke voorwerpen zijn verbindingen?\", \"veld\": 6}, {\"text\": \"Welke voorwerpen zijn verbindingen?\", \"veld\": 7}]",
+    "explanation": "Je kan █ verdelen in verbindingen █ en █. █ en █ horen in de eerste categorie. █ en █ horen in de tweede categorie.\r\n"
+  },
+  {
+    "id": "2",
+    "name": "Geluid",
+    "root_orientation": "NORTH",
+    "node_structure": "{\"text\": {\"data-veld\": \"1\", \"data-parentveld\": \"0\"}, \"children\": [{\"text\": {\"data-veld\": \"2\", \"data-parentveld\": \"1\"}, \"children\": [{\"text\": {\"data-veld\": \"3\", \"data-parentveld\": \"2\"}, \"children\": [{\"text\": {\"data-veld\": \"5\", \"data-parentveld\": \"3\"}}]}, {\"text\": {\"data-veld\": \"4\", \"data-parentveld\": \"2\"}, \"children\": [{\"text\": {\"data-veld\": \"6\", \"data-parentveld\": \"4\"}}]}]}]}",
+    "answers": "[{\"text\": \"Geluid\", \"parent\": \"\"}, {\"text\": \"Trillingen\", \"parent\": \"Geluid\"}, {\"text\": \"Snelle trillingen\", \"parent\": \"Trillingen\"}, {\"text\": \"Langzame trillingen\", \"parent\": \"Trillingen\"}, {\"text\": \"Hoger geluid\", \"parent\": \"Snelle trillingen\"}, {\"text\": \"Lager geluid\", \"parent\": \"Langzame trillingen\"}]",
+    "descriptions": "[{\"text\": \"Als je dit diagram uitwerkt, heb je een overzicht van hoe geluid werkt.\", \"veld\": 1}, {\"text\": \"Waardoor wordt geluid gemaakt?\", \"veld\": 2}, {\"text\": \"Wat zorgt ervoor dat je verschillende soorten geluiden hebt?\", \"veld\": 3}, {\"text\": \"Wat zorgt ervoor dat je verschillende soorten geluiden hebt?\", \"veld\": 4}, {\"text\": \"Wat voor soort geluiden zijn er?\", \"veld\": 5}, {\"text\": \"Wat voor soort geluiden zijn er?\", \"veld\": 6}]",
+    "explanation": "█ bestaat uit █. █ leiden naar een █. █ leiden naar een █."
+  },
+  {
+    "id": "3",
+    "name": "Kompas",
+    "root_orientation": "NORTH",
+    "node_structure": "{\"text\": {\"data-veld\": 1, \"data-parentveld\": 0}, \"children\": [{\"text\": {\"data-veld\": 2, \"data-parentveld\": 1}, \"children\": [{\"text\": {\"data-veld\": 3, \"data-parentveld\": 2}, \"children\": [{\"text\": {\"data-veld\": 5, \"data-parentveld\": 3}, \"children\": [{\"text\": {\"data-veld\": 7, \"data-parentveld\": 5}}]}]}, {\"text\": {\"data-veld\": 4, \"data-parentveld\": 2}, \"children\": [{\"text\": {\"data-veld\": 6, \"data-parentveld\": 4}, \"children\": [{\"text\": {\"data-veld\": 8, \"data-parentveld\": 6}}]}]}]}]}",
+    "answers": "[{\"text\": \"Aarde\", \"parent\": \"\"}, {\"text\": \"Aardmagnetisch veld\", \"parent\": \"Aarde\"}, {\"text\": \"Magnetische noordpool\", \"parent\": \"Aardmagnetisch veld\"}, {\"text\": \"Magnetische zuidpool\", \"parent\": \"Aardmagnetisch veld\"}, {\"text\": \"Noordpool van magneet\", \"parent\": \"Magnetische noordpool\"}, {\"text\": \"Zuidpool van magneet\", \"parent\": \"Magnetische zuidpool\"}, {\"text\": \"Wijst naar het noorden\", \"parent\": \"Noordpool van magneet\"}, {\"text\": \"Wijst naar het zuiden\", \"parent\": \"Zuidpool van magneet\"}]",
+    "descriptions": "[{\"text\": \"Als je dit diagram uitwerkt, heb je een overzicht van hoe een kompas werkt.\", \"veld\": 1}, {\"text\": \"Wat voor een soort veld heeft de aarde?\", \"veld\": 2}, {\"text\": \"Welke soort polen heeft de aarde?\", \"veld\": 3}, {\"text\": \"Welke soort polen heeft de aarde?\", \"veld\": 4}, {\"text\": \"Welke soort polen heeft een magneet?\", \"veld\": 5}, {\"text\": \"Welke soort polen heeft een magneet?\", \"veld\": 6}, {\"text\": \"Hoe blijft een kompas in de goede richting?\", \"veld\": 7}, {\"text\": \"Hoe blijft een kompas in de goede richting?\", \"veld\": 8}]",
+    "explanation": "De █ heeft een █. Dit veld bestaat uit twee polen. De █ trekt de █ aan en zorgt ervoor dat de magneet █. De █ trekt de █ aan en zorgt ervoor dat de magneet █."
+  }
+]

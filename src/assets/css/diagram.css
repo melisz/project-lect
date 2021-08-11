@@ -1,0 +1,45 @@
+/* Item in the list of words */
+.item {
+    /*cursor: move;*/
+    position: relative;
+    margin: 0 auto;
+    width: 10rem;
+    height: 5rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #fff !important;
+}
+
+/* Area in which the items are dropped */
+.droparea {
+    width: 10rem;
+    height: 5rem;
+    border: 1px dashed #000;
+    outline: 1px solid transparent;
+    border-radius: 15px;
+    /*cursor: pointer;*/
+}
+
+/* Progress bar that shows the user's process */
+#progressbar{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 20rem;
+    height: 20px;
+}
+
+/* Text inside progress bar */
+#progresstext {
+    position:absolute;
+    top:-2px;
+    left:48%;
+}
+
+/* Positioning progressbar */
+.container-progress {
+    width: 400px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}

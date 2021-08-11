@@ -1,0 +1,854 @@
+.content {
+    margin-bottom: 50px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+}
+
+.col {
+    margin: auto;
+}
+
+/* Loader from http://jsfiddle.net/kz2nm800/ */
+.loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../img/background/background.png');
+}
+
+.loader {
+    left: 50%;
+    margin-left: -4em;
+    font-size: 10px;
+    border: .8em solid rgba(218, 219, 223, 1);
+    border-left: .8em solid rgba(58, 166, 165, 1);
+    animation: spin 1.1s infinite linear;
+}
+
+.loader, .loader:after {
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -4.05em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.cursor {
+    border-radius: 15px !important;
+    color: white !important;
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    font-weight: bold !important;
+    width: 4rem;
+}
+
+.locked {
+    color: gray !important;
+    background-color:darkgray;
+    border-color: dimgray !important;
+}
+
+.unlocked {
+    color: #F1FFBB !important;
+    background-color: #E7CC14;
+    border-color: #C7B011;
+}
+
+#default {
+    border-radius: 15px !important;
+    color: white !important;
+    background-color: #87c88f;
+    border-color: #468A55;
+    font-weight: bold !important;
+    width: 4rem;
+}
+
+.current {
+    background-color: limegreen;
+    border: 3px solid #8EE0A0;
+}
+
+
+/* ============================== CSS MELISSA ============================== */
+
+@font-face {
+    /*In this example, the file path points to a file in the images folder located in the folder one level above the current folder:*/
+    font-family: 'garavitoregular';
+    src: url('../fonts/Garavito.woff2') format('woff2'),
+    url('../fonts/Garavito.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html, body {
+    background-image: url('../img/background/background.png');
+    font-family: 'garavitoregular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.formlogin {
+    position: fixed;
+    width: 28%;
+    height: auto;
+}
+
+.waving {
+    position: fixed;
+    top: 23%;
+    left: 71%;
+    width: 17%;
+    height: auto;
+}
+
+.waving2 {
+    position: fixed;
+    top: 27%;
+    left: 71%;
+    width: 15%;
+    height: auto;
+}
+
+.diagramLijstIcon {
+    position: fixed;
+    top: 45%;
+    left: 78%;
+    width: 200px;
+    float: left;
+}
+
+
+.typewritertext4 {
+    font-family: "Garavito Regular", sans-serif;
+    font-size: 17px;
+    position: relative;
+    max-height: 80px;
+    max-width: 210px;
+    top: -165px;
+    left: 90px;
+}
+
+.typewritertext5 {
+    font-family: "Garavito Regular", sans-serif;
+    font-size: 17px;
+    position: relative;
+    max-height: 80px;
+    max-width: 150px;
+    top: -165px;
+    left: 90px;
+}
+
+.winner {
+    position: fixed;
+    top: 43%;
+    left: 2%;
+    width: 145px;
+    float: left;
+}
+
+.loser {
+    position: fixed;
+    top: 40%;
+    left: 2%;
+    width: 120px;
+    float: left;
+}
+
+.diagramLijstIcon2 {
+    position: fixed;
+    top: 40%;
+    left: 2%;
+    width: 150px;
+    float: left;
+    transform: scaleX(-1);
+}
+
+.wolk {
+    width: 250px;
+    height: 250px;
+    transform: scaleX(-1);
+    display: block;
+    position: relative;
+    top: 10%;
+    left: 74px;
+}
+
+.centered {
+    position: fixed;
+    top: 17%;
+    left: 58%;
+    width: 50px;
+}
+
+.centered2 {
+    position: fixed;
+    top: 19%;
+    left: 5%;
+}
+
+.tekst {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.welkom {
+    position: absolute;
+    left: 43%;
+    top: 6%;
+    width: 200px;
+    height: 30px;
+}
+
+
+.complete {
+    position: fixed;
+    top: 46%;
+    left: 63%;
+    width: 200px;
+    animation-name: rollOver;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.complete:active {
+    animation-name: rollOver;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.tinyPicture {
+    height: 60px;
+    border-radius: 10px;
+}
+
+.setCenter {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.welcomediv {
+    position: relative;
+    left: 15%;
+    top: 45px; /* 4% */
+    width: 300px;
+    height: 140px;
+    border: 4px solid #ff5400;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 10px;
+    font-family: 'Garavito Regular', sans-serif;
+    border-radius: 10px;
+    animation-name: welcomeslide;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes welcomeslide {
+    from {
+        left: -20%;
+    }
+    to {
+        left: 15%;
+    }
+}
+
+.welcomediv:hover {
+    border: 9px solid #ff5400;
+    border-radius: 10px;
+}
+
+.welcomediv:active {
+    background: rgba(255, 160, 46, 0.5);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.docentdiv {
+    position: absolute;
+    top: 36.5%; /* 4% */
+    width: 300px;
+    height: 140px;
+    border: 4px solid #ff5400;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 10px;
+    font-family: 'Garavito Regular', sans-serif;
+    border-radius: 10px;
+}
+
+.pos4 {
+    left: 4%;
+    float: left;
+    animation-name: example1;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.pos1 {
+    left: 28%;
+    float: left;
+    animation-name: example2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.pos2 {
+    left: 52%;
+    float: left;
+    animation-name: example3;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.pos3 {
+    left: 76%;
+    float: left;
+    animation-name: example3;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    padding: 30px;
+}
+
+
+@keyframes example1 {
+    from {
+        left: -20%;
+    }
+    to {
+        left: 4%;
+    }
+}
+
+@keyframes example2 {
+    from {
+        left: -20%;
+    }
+    to {
+        left: 28%;
+    }
+}
+
+@keyframes example3 {
+     from {
+         left: -20%;
+     }
+     to {
+         left: 52%;
+     }
+ }
+
+@keyframes example4 {
+    from {
+        left: -20%;
+    }
+    to {
+        left: 76%;
+    }
+}
+
+.docentdiv:hover {
+    border: 9px solid #ff5400;
+    border-radius: 10px;
+}
+
+.docentdiv:active {
+    background: rgba(255, 160, 46, 0.5);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.shopbox {
+    box-sizing: border-box;
+    /*  border-radius: 5px;*/
+    border: transparent;
+    border-radius: 5px;
+}
+
+.shopbox:hover {
+    border: 2px solid #ff5400;
+}
+
+.bottom {
+    position: relative;
+    animation-duration: 1.5s;
+}
+
+.my-element {
+    display: block;
+    margin: 0 0.5rem;
+    animation-duration: 2s;
+    animation: infinite;
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
+}
+
+/* This changes all the animations globaly */
+:root {
+    --animate-duration: 800ms;
+    --animation-delay: 2s;
+}
+
+.shopList {
+
+    position: absolute;
+    left: 10%;
+    top: 17%;
+
+    width: 550px;
+    height: 510px;
+    font-family: 'Garavito Regular', sans-serif;
+    background-color: rgba(255, 248, 249, 0.8);
+    border-radius: 20px;
+    border: 4px solid #ff5400;
+    animation-name: example3;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+}
+
+.shopList .card {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.padding2 {
+    padding-bottom: 60px;
+    padding-top: 40px;
+}
+
+
+@keyframes example3 {
+    from {
+        left: -37%;
+    }
+    to {
+        right: 150%;
+    }
+}
+
+.background {
+    background: transparent;
+}
+
+.contain {
+    position: relative;
+    left: 15%;
+    top: 18%;
+    width: 300px;
+    height: 140px;
+    border: 4px solid #ff5400;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 10px;
+    font-family: 'Garavito Regular', sans-serif;
+    border-radius: 10px;
+    animation-name: example1;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.contain:hover {
+    border: 9px solid #ff5400;
+    border-radius: 10px;
+}
+
+.contain:active {
+    background: rgba(255, 160, 46, 0.5);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+@keyframes rollOver {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.buttonstyle {
+    top: 35%;
+    text-align: center;
+}
+
+
+.diagramtable {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    top: 30%;
+    left: 40%;
+    border: black;
+}
+
+.diagramtable img {
+    width: 100%;
+    height: auto;
+}
+
+.diagramtable .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.diagramtable .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.natuurkunde {
+    position: fixed;
+    top: 28%;
+    left: 9%;
+    width: 20%;
+    height: auto;
+}
+
+.orange-color {
+    color: #ff3300;
+}
+
+.typewritertext {
+    font-family: "Garavito Regular", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    height: 80px;
+    width: 210px;
+    top: 20px;
+    left: 110px;
+}
+
+.typewritertext2 {
+    font-family: "Garavito Regular", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    height: 80px;
+    width: 210px;
+    top: -10px;
+    left: 110px;
+}
+
+.wolk2 {
+    width: 190px;
+    height: 180px;
+    display: block;
+    position: relative;
+    top: 10%;
+    left: 74px;
+}
+
+
+.typewritertext3 {
+    font-family: "Garavito Regular", sans-serif;
+    font-size: 17px;
+    position: relative;
+    max-height: 80px;
+    max-width: 210px;
+    top: -165px;
+    left: 90px;
+}
+
+.displayfigure {
+    display: inline-block;
+}
+
+.button {
+    background-color: #cc2f02;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 5px grey;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: black;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #ff7852;
+}
+
+.fontstyle {
+    font-family: "Garavito Regular", sans-serif;
+    color: #363434
+}
+
+h2, .tekst, a {
+    font-family: "Garavito Regular", sans-serif;
+    color: #363434;
+}
+
+.navbar-text {
+    font-family: "Garavito Regular", sans-serif;
+    font-size: 35px;
+}
+
+.navbar {
+    background-image: url("../img/navbarBackground.jpg");
+    box-shadow: 10px 10px 5px grey;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pp {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+    /* cursor: pointer;*/
+    width: 100%;
+    background-image: url("../img/orange2.jpg");
+    border-radius: 10px;
+    font-family: "Garavito Regular", sans-serif;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.div6 {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 350px;
+    height: 70px;
+    margin-top: 4%;
+    transition-duration: 0.2s;
+
+}
+
+.pp:hover {
+    background: white;
+    color: black;
+}
+
+.div6:nth-child(odd) {
+    transform: perspective(300px) rotateY(45deg);
+    box-shadow: -2px 2px 7px gray;
+}
+
+.div6:nth-child(even) {
+    transform: perspective(300px) rotateY(-45deg);
+    box-shadow: 2px 2px 7px gray;
+}
+
+.div6:hover {
+    transform: rotateY(0);
+    background: transparent;
+    color: black;
+    box-shadow: 2px 2px 7px gray;
+    width: 350px;
+    height: 200px;
+}
+
+table {
+    width: 40em;
+    margin: 2em auto;
+
+}
+
+thead {
+    background-image: url('../img/navbarBackground.jpg');
+    color: #fff;
+    display: table-header-group;
+}
+
+td {
+    width: 10em;
+    padding: 0.3em;
+    font-weight: bold;
+    font-size: 20px;
+    color: #373737;
+}
+
+tbody {
+    box-shadow: 2px 2px 7px gray;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+div.pager {
+    text-align: center;
+    margin: 1em 0;
+}
+
+div.pager span {
+    display: inline-block;
+    box-shadow: 2px 2px 7px gray;
+    width: 1.8em;
+    height: 2.2em;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #373737;
+    color: #000000;
+    margin-right: 0.5em;
+}
+
+div.pager span.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 3px solid #ff5400;
+}
+
+.position-table {
+    position: relative;
+    top: 20%;
+    left: -20%;
+    padding-bottom: 100px;
+
+    /* animation-name: diagramlist;
+     animation-duration: 1.2s;
+     animation-iteration-count: 1; */
+}
+
+.shop {
+    height: 700px;
+    position: relative;
+    top: 30%;
+    left: -20%;
+    padding-bottom: 70px;
+    padding-top: 50px;
+
+    animation-name: shop;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+}
+
+.listofwordssize {
+    position: relative;
+    width: 200px;
+
+    background-color: rgba(167, 255, 25, 0.85);
+    border-radius: 20px;
+    left: 12%;
+}
+
+.diagramsize {
+    position: relative;
+    left: 12%;
+    float: right;
+}
+
+
+@keyframes diagramlist {
+    from {
+        left: -70%;
+    }
+    to {
+        left: -20%;
+    }
+}
+
+@keyframes shop {
+    from {
+        left: -70%;
+    }
+    to {
+        left: -20%;
+    }
+}
+
+.uitleg-tekst {
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.naam-tekst {
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    width: 700px;
+}
+
+.uitleg-style {
+    box-shadow: 2px 2px 7px gray;
+    position: relative;
+    left: 0.5%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.uitleg-style2 {
+    box-shadow: 1px 1px 5px gray;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.buttonpadding {
+    padding-bottom: 8px;
+}
+
+.color-table {
+    position: relative;
+    left: 5%;
+    animation-name: create;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes create {
+    from {
+        left: -30%;
+    }
+    to {
+        left: 5%;
+    }
+}
+
+.pos-diagram {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+

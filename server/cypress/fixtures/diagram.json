@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "name": "Voorbeeld",
+    "root_orientation": "NORTH",
+    "node_structure": "{\n    \"text\": {\n        \"data-veld\": 1,\n        \"data-parentveld\": 0\n    },\n    \"children\": [\n        {\n            \"text\": {\n                \"data-veld\": 2,\n                \"data-parentveld\": 1\n            },\n            \"children\": [\n                {\n                    \"text\": {\n                        \"data-veld\": 3,\n                        \"data-parentveld\": 2\n                    }\n                },\n                {\n                    \"text\": {\n                        \"data-veld\": 4,\n                        \"data-parentveld\": 2\n                    }\n                }\n            ]\n        }\n    ]\n}",
+    "answers": "[\n    {\n        \"text\": \"Woord 1\",\n        \"parent\": \"\"\n    },\n    {\n        \"text\": \"Woord 2\",\n        \"parent\": \"Woord 1\"\n    },\n    {\n        \"text\": \"Woord 3\",\n        \"parent\": \"Woord 2\"\n    },\n    {\n        \"text\": \"Woord 4\",\n        \"parent\": \"Woord 2\"\n    }\n]",
+    "descriptions": "[{\"text\": \"Hier komt de beschrijving voor veld 1.\",\"veld\": 1},{\"text\": \"Hier komt de beschrijving voor veld 2.\",\"veld\": 2},{\"text\": \"Hier komt de beschrijving voor veld 3.\",\"veld\": 3},{\"text\": \"Hier komt de beschrijving voor veld 4.\",\"veld\": 4}]",
+    "explanation": "In het eerste veld hoort [1] te staan. In het tweede veld hoort [2] te staan. Daaronder staan [3] en [4]. [2] heeft dus twee \"kinderen\"."
+
+  }
+]

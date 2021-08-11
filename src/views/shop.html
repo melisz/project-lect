@@ -1,0 +1,138 @@
+<div class="loading">
+    <div class="loader"></div>
+</div>
+
+<div class="padding2 shop">
+
+    <div class="align-con ">
+
+        <!--         Buttons with id's that are referred to in the switch statement in app.js -->
+        <div class="row justify-content-center p-3">
+            <div class="card-body text-center p-0">
+                <button class="btn cursor unlocked" id="default" style="width: 8rem">Normale cursor</button>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center p-3">
+            <div class="col-5 text-center background">
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="assets/cursors/cur/minecraftSword.cur" alt="Card image cap">
+                    <div class=" card-body text-center p-0">
+                        <button class="btn  my-3 cursor" id="minecraftSword"></button>
+                    </div>
+                </div>
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="assets/cursors/cur/squid.cur" alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  my-3 cursor" id="squid"></button>
+                    </div>
+                </div>
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="assets/cursors/cur/knuckles.cur" alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  my-3 cursor" id="knuckles"></button>
+                    </div>
+                </div>
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="assets/cursors/cur/fire.cur" alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  my-3 cursor" id="fire"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center p-3">
+            <div class="col-5 background text-center">
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="http://www.rw-designer.com/cursor-view/37335.gif" alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  cursor mb-3" id="mario"></button>
+                    </div>
+                </div>
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="http://www.rw-designer.com/cursor-view/37466.gif"
+                         alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  cursor mb-3" id="purplePacmanGhost"></button>
+                    </div>
+                </div>
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top"
+                         src="https://static.wixstatic.com/media/3e8e99_7594f12b8b4c474ba30c58a3f83c65d1~mv2.gif"
+                         alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  cursor mb-3" id="rainbowTail"></button>
+                    </div>
+                </div>
+                <div class="background d-inline-block m-3" style="width: 5rem;">
+                    <img class="card-img-top" src="assets/cursors/cur/pizza.cur" alt="Card image cap">
+                    <div class="card-body text-center p-0">
+                        <button class="btn  cursor mb-3" id="pizza"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <img id="icon" src="../src/assets/img/diagramlijst1.png" class="diagramLijstIcon" onmouseover="changeImage()">
+
+    <div class="centered">
+        <img id="wolk" src="../src/assets/img/wolk.png" alt="Snow" class="wolk">
+        <div id="typedtext" class="typewritertext2"></div>
+    </div>
+</div>
+
+<script>
+
+    // set up text to print, each item in array is new line
+    var aText = ["",
+        "Ontgrendel alle",
+        "cursors met je",
+        "verdiende punten!"];
+    var iSpeed = 30; // time delay of print out
+    var iIndex = 0; // start printing array at this position
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+
+    function typewriter() {
+
+        sContents =  ' ';
+        iRow = Math.max(0, iIndex-iScrollAt);
+        var destination = document.getElementById("typedtext");
+
+        while ( iRow < iIndex ) {
+            sContents += aText[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+        if ( iTextPos++ === iArrLength ) {
+            iTextPos = 0;
+            iIndex++;
+            if ( iIndex !== aText.length ) {
+                iArrLength = aText[iIndex].length;
+                setTimeout("typewriter()", 50);
+            }
+        } else {
+            setTimeout("typewriter()", iSpeed);
+        }
+    }
+
+    typewriter();
+
+    var image = document.getElementById("icon");
+
+    function changeImage() {
+        if (image.getAttribute('src') === "../src/assets/img/diagramLijst1.png") {
+            //change the source of the image
+            image.src = "../src/assets/img/diagramLijst2.png";
+        } else {
+            image.src = "../src/assets/img/diagramLijst1.png";
+        }
+    }
+
+</script>

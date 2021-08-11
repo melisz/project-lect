@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-lg-12 text-center my-2 tekst">
+        <h1 style="font-size: 50px" class="mt-5">Welkom <span id="username"></span>!</h1>
+        <p class="lead">Het inloggen is gelukt!</p>
+
+        <code class="example-response"></code>
+
+    </div>
+</div>
+
+
+<article class="docentdiv pos4 background" onclick="goToMyClass()">
+    <div>
+        <img src="../src/assets/img/myclass.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Mijn klassen</h3>
+    </div>
+</article>
+
+
+<!-- ------------------------------------------------------------------- -->
+
+
+
+<article class="docentdiv pos1 background" onclick="goToCreate()">
+
+    <div>
+        <img src="../src/assets/img/create.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Create</h3>
+    </div>
+
+</article>
+
+
+
+
+
+<!-- ------------------------------------------------------------------- -->
+<article class="docentdiv pos2 background" onclick="goToDiagrammen()">
+
+    <div name="fname">
+        <img src="../src/assets/img/diagram.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Diagrammenlijst</h3>
+    </div>
+
+</article>
+
+
+
+<!-- ------------------------------------------------------------------- -->
+
+
+
+<article class="docentdiv pos3 background" onclick="goToLogout()">
+    <div>
+        <img src="../src/assets/img/logout.png" class="tinyPicture setCenter">
+        <h3 class="buttonstyle">Uitloggen</h3>
+    </div>
+</article>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<script>
+
+    async function goToCreate() {
+        app.loadController(CONTROLLER_CREATE_DIAGRAM);
+    }
+
+
+    async function goToDiagrammen() {
+        app.loadController(CONTROLLER_DIAGRAM_LIST);
+    }
+
+    async function goToLogout() {
+        app.loadController(CONTROLLER_LOGOUT);
+    }
+
+    async function  goToMyClass() {
+        app.loadController(CONTROLLER_MY_CLASSES);
+    }
+
+</script>

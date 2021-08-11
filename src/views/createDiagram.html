@@ -1,0 +1,75 @@
+<!-- Row for the description -->
+<div class="row justify-content-center p-3">
+    <div class="col-4 bg-light text-center" style="border-radius: 15px">
+        <p class="my-auto p-3" id="uitleg">Maak je eigen diagram</p>
+
+
+    </div>
+</div>
+
+<div class="row  p-3 ">
+
+    <div class="col-4 color-table mr-5 " id="veldenlijst">
+        <table class="table ">
+            <thead>
+            <tr>
+                <form >
+                    <div class="form-group justify-content-center">
+                        <label class="naam-tekst" for="naam">Naam diagram: </label>
+                        <br>
+                        <input type="text" size="59.5" class="uitleg-style2" id="naam">
+                    </div>
+                    <div></div>
+
+                </form>
+            </tr>
+            <tr>
+                <th scope="col">Veldnummer</th>
+                <th scope="col">Gekoppeld aan</th>
+                <th scope="col"></th>
+                <th scope="col">Beschrijving</th>
+            </tr>
+            </thead>
+            <tbody class="position-tbody">
+            <tr id="row1">
+                <th scope="row">1</th>
+                <td>Hoofdveld <i class="fas fa-info-circle" data-toggle="tooltip"
+                                 title="Dit veld staat boven aan in het diagram."></i></td>
+                <td></td>
+                <td><p class="beschrijving" contenteditable="true">Test</p></td>
+            </tr>
+            <tr id="row2">
+                <th scope="row">2</th>
+                <td><label><select></select></label></td>
+                <td></td>
+                <td><p class="beschrijving" contenteditable="true">Test</p></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="text-md-center">
+            <button class="btn btn-primary mb-2" id="addRow">➕ Voeg een veld toe</button>
+            <button class="btn btn-primary mb-2" id="generateDiagram">Genereer diagram</button>
+        </div>
+
+        <div class=" justify-content-end buttonpadding ">
+            <label class="uitleg-tekst" for="explanation">Uitleg: </label>
+            <br>
+            <textarea rows="6" cols="62" class="uitleg-style" id="explanation"> </textarea>
+        </div>
+
+        <div class="text-md-center">
+            <button id="hassan" type="button" class="btn btn-primary mb-2 ">Submit</button>
+
+        </div>
+    </div>
+
+    <div class="pos-diagram">
+        <div id="diagram"></div>
+    </div>
+
+</div>
+
+
+
+

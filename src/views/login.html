@@ -1,0 +1,80 @@
+<div class="row justify-content-md-center">
+    <div class="col-sm-4 m-3  fontstyle formlogin">
+        <br>
+        <br>
+
+        <h2 class="mb-3 text-center">Inloggen</h2>
+
+        <form class="login-form">
+            <div class="form-group">
+                <label for="exampleInputUsername">Gebruikersnaam</label>
+                <input type="text" name="username" class="form-control" id="exampleInputUsername"
+                       aria-describedby="emailHelp" placeholder="Vul gebruikersnaam in">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword">Wachtwoord</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword"
+                       placeholder="Vul wachtwoord in">
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Onthoud mij</label>
+            </div>
+
+            <div class="error mb-3 text-danger"></div>
+
+            <button type="submit" class="button" >Login</button>
+
+            <br>
+            <br>
+            <a data-controller="docent" href="#" class="orange-color text-center">Inloggen als docent</a>
+        </form>
+    </div>
+</div>
+
+
+<img id ="Waving" class="waving" src ="assets/img/Waving.gif" onmouseover="changeImage()"/>
+
+<img id ="graphics" class="natuurkunde" src ="assets/img/graphics.gif" onmouseover="getExplosie()"/>
+
+<!-- To change the image when clicking -->
+<script>
+    var image = document.getElementById("Waving");
+
+    var image2 = document.getElementById("graphics");
+
+    function changeImage()
+    {
+        if (image.getAttribute('src') === "assets/img/Waving.gif")
+        {
+            //change the source of the image
+            image.src = "assets/img/figure.png";
+
+            //Change te class to change the size of the image
+            image.classList.remove('waving');
+            image.classList.toggle('waving2');
+        }
+        else
+        {
+            image.src = "assets/img/Waving.gif";
+            image.classList.remove('waving2');
+            image.classList.toggle('waving');
+        }
+    }
+
+    function getExplosie()
+    {
+        if (image2.getAttribute('src') === "assets/img/graphics.gif")
+        {
+            //change the source of the image
+            image2.src = "assets/img/explosie.gif";
+
+        }
+        else
+        {
+            image2.src = "assets/img/graphics.gif";
+
+        }
+    }
+
+</script>
